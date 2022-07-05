@@ -40,17 +40,17 @@ function comprarCelular() {
 
         switch (producto) {
           case 1:
-            total += precios[0];
+            total += precios.find(precio => precio.precio[0]);
             carrito.push(new Producto('iPhone 11', 206000));
             alert(`Se agrego: iPhone 11 al carrito su valor es de $${precios[0].precio}`);
             break;
           case 2:
-            total += precios[1];
+            total += precios.find(precio => precio.precio[1]);
             carrito.push(new Producto('iPhone 12', 263000));
             alert(`Se agrego: iPhone 12 al carrito su valor es de $${precios[1].precio}`);
             break;
           case 3:
-            total += precios[2];
+            total += precios.find(precio => precio.precio[2]);
             carrito.push(new Producto('iPhone 13 Pro Max', 353000));
             alert(`Se agrego: iPhone 13 Pro Max al carrito su valor es de $${precios[2].precio}`);
             break;
