@@ -72,6 +72,11 @@ main h1 {
     margin-bottom: 1rem;
 }
 
+.card p {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
 .card img {
     height: 100%;
     width: 100%;
