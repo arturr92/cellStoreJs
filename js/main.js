@@ -77,6 +77,7 @@ function comprarCelular() {
   saludo();
 }
 
+// EVENTO
 document.querySelector('#btn').onclick = () => {
   nombre = prompt('Cual es su nombre?');
   carrito = [];

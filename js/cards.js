@@ -32,4 +32,4 @@ let crearCards = () => {
     });
 };
 
-console.log(crearCards());
+crearCards();
