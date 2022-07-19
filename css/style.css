@@ -1,0 +1,89 @@
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+}
+
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.3rem;
+    color: #111;
+    border: 0.2rem solid #1E90FF;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    background: none;
+}
+
+.btn:hover {
+    background: #1E90FF;
+    color: #FFD700;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+    gap: 5rem;  
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito{
+    display: none;
+}
+
+.submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    right:0;
+
+    top:100%;
+    z-index: 1;
+    background-color: white;
+    padding: 20px;
+    min-height: 400px;
+    min-width: 300px;
+}
+
+.productos {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 2.5rem;
+}
+
+.productos h2 {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    color: #444;
+}
+
+.productos__cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+}
+
+.productos__card {
+    flex-basis: 31%;
+    border-radius: 1rem;
+    text-align: center;
+    background: #fff;
+    padding-bottom: 1rem;
+    cursor: pointer;
+}
+
+footer {
+    background: #1E90FF;
+}
