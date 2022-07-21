@@ -15,6 +15,7 @@ function cargarEventListeners() {
      vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
 
      document.addEventListener('DOMContentLoaded', () => {
+          //OPERADOR OR 
           articulosCarrito = JSON.parse( localStorage.getItem('carrito') ) || []  ;
           carritoHTML();
      });
@@ -46,6 +47,7 @@ function leerDatosCurso(curso) {
           const cursos = articulosCarrito.map( curso => {
                if( curso.id === infoCurso.id ) {
                     let cantidad = parseInt(curso.cantidad);
+                    //OPERADOR ++
                     cantidad++
                     curso.cantidad =  cantidad;
                     return curso;
@@ -53,8 +55,10 @@ function leerDatosCurso(curso) {
                     return curso;
                }
           })
+          //SPREAD
           articulosCarrito = [...cursos];
      }  else {
+          //SPREAD
           articulosCarrito = [...articulosCarrito, infoCurso];
      }
 
@@ -83,13 +87,15 @@ function carritoHTML() {
 
      articulosCarrito.forEach(curso => {
           const row = document.createElement('tr');
+          //DESTRUCTURACION 
+          const {imagen, titulo, precio, cantidad} = curso;
           row.innerHTML = `
                <td>  
-                    <img src="${curso.imagen}" width=100>
+                    <img src="${imagen}" width=100>
                </td>
-               <td>${curso.titulo}</td>
-               <td>${curso.precio}</td>
-               <td>${curso.cantidad} </td>
+               <td>${titulo}</td>
+               <td>${precio}</td>
+               <td>${cantidad} </td>
                <td>
                     <a href="#" class="borrar-curso" data-id="${curso.id}">X</a>
                </td>
