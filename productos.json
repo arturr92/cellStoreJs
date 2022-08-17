@@ -1,0 +1,185 @@
+{
+    "productos": [{
+            "id": 1,
+            "titulo": "iPhone 11",
+            "imagen": "./images/products/iphone/iphone3.jpeg",
+            "precio": 180000,
+            "categoria": "Destacados"
+        },
+
+        {
+            "id": 2,
+            "titulo": "boAt Red",
+            "imagen": "./images/products/headphone/headphone2.jpeg",
+            "precio": 35000,
+            "categoria": "Especiales"
+        },
+        {
+            "id": 3,
+            "titulo": "iPhone 12 Pro",
+            "imagen": "./images/products/iphone/iphone2.jpeg",
+            "precio": 350000,
+            "categoria": "Especiales"
+        },
+        {
+            "id": 4,
+            "titulo": "iPhone 11",
+            "imagen": "./images/products/iphone/iphone4.jpeg",
+            "precio": 180000,
+            "categoria": "Destacados"
+        },
+        {
+            "id": 5,
+            "titulo": "boAt White",
+            "imagen": "./images/products/headphone/headphone3.jpeg",
+            "precio": 35000,
+            "categoria": "Especiales"
+        },
+
+        {
+            "id": 6,
+            "titulo": "Marshall Monitor Black",
+            "imagen": "./images/products/headphone/headphone4.jpeg",
+            "precio": 87000,
+            "categoria": "Destacados"
+        },
+
+
+        {
+            "id": 7,
+            "titulo": "iPhone 11",
+            "imagen": "./images/products/iphone/iphone5.jpeg",
+            "precio": 180000,
+            "categoria": "Especiales"
+        },
+        {
+            "id": 8,
+            "titulo": "Sony WH-CH510 Light Black",
+            "imagen": "./images/products/headphone/headphone6.jpeg",
+            "precio": 9000,
+            "categoria": "Especiales"
+        },
+        {
+            "id": 9,
+            "titulo": "iPhone 13 Pro",
+            "imagen": "./images/products/iphone/iphone6.jpeg",
+            "precio": 430000,
+            "categoria": "Tendencia"
+        },
+        {
+            "id": 10,
+            "titulo": "Sony WH-CH510 White",
+            "imagen": "./images/products/headphone/headphone7.jpeg",
+            "precio": 9000,
+            "categoria": "Especiales"
+        },
+
+        {
+            "id": 11,
+            "titulo": "Sony WH-CH510 Grey",
+            "imagen": "./images/products/headphone/headphone7.jpeg",
+            "precio": 9000,
+            "categoria": "Tendencia"
+        },
+        {
+            "id": 12,
+            "titulo": "Sony WH-CH510 Black",
+            "imagen": "./images/products/headphone/headphone5.jpeg",
+            "precio": 9000,
+            "categoria": "Especiales"
+        },
+        {
+            "id": 13,
+            "titulo": "Sony WH-CH510 Red",
+            "imagen": "./images/products/headphone/headphone8.jpeg",
+            "precio": 9000,
+            "categoria": "Tendencia"
+        },
+        {
+            "id": 14,
+            "titulo": "Samsung Galaxy S22 Ultra",
+            "imagen": "./images/products/sumsung/samsung6.jpeg",
+            "precio": 235000,
+            "categoria": "Especiales"
+        },
+        {
+            "id": 15,
+            "titulo": "Samsung Galaxy S20",
+            "imagen": "./images/products/sumsung/samsung5.jpeg",
+            "precio": 120000,
+            "categoria": "Tendencia"
+        },
+        {
+            "id": 16,
+            "titulo": "iPhone 12",
+            "imagen": "./images/products/iphone/iphone1.jpeg",
+            "precio": 220000,
+            "categoria": "Especiales"
+        },
+        {
+            "id": 17,
+            "titulo": "Sony WH-CH510 Blue",
+            "imagen": "./images/products/headphone/headphone9.jpeg",
+            "precio": 9000,
+            "categoria": "Tendencia"
+        },
+        {
+            "id": 18,
+            "titulo": "Samsung Galaxy S22",
+            "imagen": "./images/products/sumsung/samsung4.jpeg",
+            "precio": 215000,
+            "categoria": "Especiales"
+        },
+        {
+            "id": 19,
+            "titulo": "Gionee",
+            "imagen": "./images/products/headphone/headphone10.jpeg",
+            "precio": 70000,
+            "categoria": "Tendencia"
+        },
+        {
+            "id": 20,
+            "titulo": "boAt Blue",
+            "imagen": "./images/products/headphone/headphone1.jpeg",
+            "precio": 35000,
+            "categoria": "Especiales"
+        },
+        {
+            "id": 21,
+            "titulo": "Samsung Galaxy S20 Ultra",
+            "imagen": "./images/products/sumsung/samsung2.jpeg",
+            "precio": 150000,
+            "categoria": "Destacados"
+        },
+        {
+            "id": 22,
+            "titulo": "Auriculares newTech Red",
+            "imagen": "./images/products/headphone/headphone11.jpeg",
+            "precio": 50000,
+            "categoria": "Tendencia"
+        },
+
+        {
+            "id": 23,
+            "titulo": "Samsung Galaxy S21 Ultra",
+            "imagen": "./images/products/sumsung/samsung1.jpeg",
+            "precio": 200000,
+            "categoria": "Especiales"
+        },
+        {
+            "id": 24,
+            "titulo": "Samsung Galaxy S21",
+            "imagen": "./images/products/sumsung/samsung3.jpeg",
+            "precio": 175000,
+            "categoria": "Tendencia"
+        },
+        {
+            "id": 25,
+            "titulo": "Auriculares newTech Black",
+            "imagen": "./images/products/headphone/headphone12.jpeg",
+            "precio": 50000,
+            "categoria": "Destacados"
+        }
+
+    ]
+}

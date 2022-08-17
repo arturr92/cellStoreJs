@@ -1,131 +1,790 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Carrito</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
+    <!DOCTYPE html>
+    <html lang="en">
 
-    <header class="header">
-        <nav class="navbar navbar-expand-md ">
-            <div class="container">
-                <a class="navbar-brand logo" href="/index.html">i <i class="fa-solid fa-heart"></i> Cell</a>
-                <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Productos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Testimoniales</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <ul>
-                        <li class="submenu">
-                                <i class="fa-solid fa-cart-shopping"></i>
-                                <div id="carrito">
-                                        <table id="lista-carrito">
-                                            <thead>
-                                                <tr>
-                                                    <th>Imagen</th>
-                                                    <th>Nombre</th>
-                                                    <th>Precio</th>
-                                                    <th>Cantidad</th>
-                                                    <th></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody></tbody>
-                                        </table>
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     
-                                        <a href="#" id="vaciar-carrito" class="btn">Vaciar Carrito</a>
-                                </div>
-                        </li>
-                    </ul>
-                </div>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css
+    ">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <title>i Love Cell</title>
+    </head>
+
+    <body>
+
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="navigation">
+        <div class="container">
+            <nav class="nav">
+            <div class="nav__hamburger">
+                <svg>
+                <use xlink:href="./images/sprite.svg#icon-menu"></use>
+                </svg>
             </div>
-        </nav>
+
+            <div class="nav__logo">
+                <a href="/" class="scroll-link">
+                i Love Cell
+                </a>
+            </div>
+
+            <div class="nav__menu">
+                <div class="menu__top">
+                <span class="nav__category">i Love Cell</span>
+                <a href="#" class="close__toggle">
+                    <svg>
+                    <use xlink:href="./images/sprite.svg#icon-cross"></use>
+                    </svg>
+                </a>
+                </div>
+                <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#header" class="nav__link scroll-link">Inicio</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#category" class="nav__link scroll-link">Categorias</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#news" class="nav__link scroll-link">Blog</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#contact" class="nav__link scroll-link">Contacto</a>
+                </li>
+                </ul>
+            </div>
+
+            <div class="nav__icons">
+                <a href="#" class="icon__item">
+                <svg class="icon__user">
+                    <use xlink:href="./images/sprite.svg#icon-user"></use>
+                </svg>
+                </a>
+
+                <a href="#" class="icon__item">
+                <svg class="icon__search">
+                    <use xlink:href="./images/sprite.svg#icon-search"></use>
+                </svg>
+                </a>
+
+                <a href="#" class="icon__item">
+                <svg class="icon__cart">
+                    <use xlink:href="./images/sprite.svg#icon-shopping-basket"></use>
+                </svg>
+                <span id="cart__total">0</span>
+                </a>
+            </div>
+            </nav>
+        </div>
+        </div>
+
+        <!-- Hero -->
+        <div class="hero">
+        <div class="glide" id="glide_1">
+            <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                <li class="glide__slide">
+                <div class="hero__center">
+                    <div class="hero__left">
+                    <span class="">Lo ultimo en tecnologia</span>
+                    <h1 class="">LO QUE ESTABAS BUSCANDO!</h1>
+                    <p>La ultima coleccion de celulares y auriculares</p>
+                    <a href="#productos"><button class="hero__btn">COMPRAR</button></a>
+                    </div>
+                    <div class="hero__right">
+                    <div class="hero__img-container">
+                        <img class="banner_01" src="./images/banner_01.png" alt="banner2" />
+                    </div>
+                    </div>
+                </div>
+                </li>
+                <li class="glide__slide">
+                <div class="hero__center">
+                    <div class="hero__left">
+                    <span>Lo ultimo en tecnologia</span>
+                    <h1>LO QUE ESTABAS BUSCANDO!</h1>
+                    <p>La ultima coleccion de celulares y auriculares</p>
+                    <a href="#productos"><button class="hero__btn">COMPRAR</button></a>
+                    </div>
+                    <div class="hero__right">
+                    <img class="banner_02" src="./images/banner_02.png" alt="banner2" />
+                    </div>
+                </div>
+                </li>
+            </ul>
+            </div>
+            <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+            </div>
+
+            <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                <svg>
+                <use xlink:href="./images/sprite.svg#icon-arrow-left2"></use>
+                </svg>
+            </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                <svg>
+                <use xlink:href="./images/sprite.svg#icon-arrow-right2"></use>
+                </svg>
+            </button>
+            </div>
+        </div>
+        </div>
     </header>
 
-    <main id="lista-cursos" class="productos">
-        <h1 class="heading">Nuestros Productos</h1>
-        <div class="productos__cards"></div>
-    </main>  
+    <!-- Main -->
+    <main id="main">
+        <div class="container">s
+        <section id="collection" class="section collection">
+            <div class="collection__container" data-aos="fade-up" data-aos-duration="1200">
+            <div class="collection__box">
+                <div class="img__container">
+                <img class="collection_02" src="./images/collection_02.png" alt="">
+                </div>
+                <div class="collection__content">
+                <div class="collection__data">
+                    <span>Nuevos Colores</span>
+                    <h1>AURICULARES</h1>
+                    <a href="#productos">COMPRAR</a>
+                </div>
+                </div>
+            </div>
+            <div class="collection__box">
+                <div class="img__container">
+                <img class="collection_01" src="./images/collection_01.png" alt="">
+                </div>
+                <div class="collection__content">
+                <div class="collection__data">
+                    <span>Celulares personalizables</span>
+                    <h1>CELULARES</h1>
+                    <a href="#productos">COMPRAR</a>
+                </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Latest Products -->
+        <section class="section latest__products" id="latest">
+            <div class="title__container">
+            <div class="section__title active" data-id="Latest Products">
+                <span class="dot"></span>
+                <h1 class="primary__title">Ultimos Productos</h1>
+            </div>
+            </div>
+            <div class="container" data-aos="fade-up" data-aos-duration="1200">
+            <div class="glide" id="glide_2">
+                <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides latest-center">
+                    <li class="glide__slide">
+                    <div class="product">
+                        <div class="product__header">
+                        <img src="/images/products/iPhone/iphone6.jpeg" alt="product">
+                        </div>
+                        <div class="product__footer">
+                        <h3>iPhone 13 PRO</h3>
+                        <div class="product__price">
+                            <h4>$430000</h4>
+                        </div>
+                        <a href="#"><button type="submit" class="product__btn">Agregar al Carrito</button></a>
+                        </div>
+                        <ul>
+                        <li>
+                            <a data-tip="Quick View" data-place="left" href="#">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-eye"></use>
+                            </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-tip="Add To Wishlist" data-place="left" href="#">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
+                            </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-tip="Add To Compare" data-place="left" href="#">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-loop2"></use>
+                            </svg>
+                            </a>
+                        </li>
+                        </ul>
+                    </div>
+                    </li>
+                    <li class="glide__slide">
+                    <div class="product">
+                        <div class="product__header">
+                        <img src="/images/products/sumsung/samsung5.jpeg" alt="product">
+                        </div>
+                        <div class="product__footer">
+                        <h3>Samsung Galaxy S22</h3>
+                        <div class="product__price">
+                            <h4>$215000</h4>
+                        </div>
+                        <a href="#"><button type="submit" class="product__btn">Agregar al Carrito</button></a>
+                        </div>
+                        <ul>
+                        <li>
+                            <a data-tip="Quick View" data-place="left" href="#">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-eye"></use>
+                            </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-tip="Add To Wishlist" data-place="left" href="#">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
+                            </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-tip="Add To Compare" data-place="left" href="#">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-loop2"></use>
+                            </svg>
+                            </a>
+                        </li>
+                        </ul>
+                    </div>
+                    </li>
+                    <li class="glide__slide">
+                    <div class="product">
+                        <div class="product__header">
+                        <img src="/images/products/headphone/headphone4.jpeg" alt="product">
+                        </div>
+                        <div class="product__footer">
+                        <h3>Marshall Monitor black</h3>
+                        <div class="product__price">
+                            <h4>$87000</h4>
+                        </div>
+                        <a href="#"><button type="submit" class="product__btn">Agregar al Carrito</button></a>
+                        </div>
+                        <ul>
+                        <li>
+                            <a data-tip="Quick View" data-place="left" href="#">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-eye"></use>
+                            </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-tip="Add To Wishlist" data-place="left" href="#">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
+                            </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-tip="Add To Compare" data-place="left" href="#">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-loop2"></use>
+                            </svg>
+                            </a>
+                        </li>
+                        </ul>
+                    </div>
+                    </li>
+                    <li class="glide__slide">
+                    <div class="product">
+                        <div class="product__header">
+                        <img src="/images/products/sumsung/samsung3.jpeg" alt="product">
+                        </div>
+                        <div class="product__footer">
+                        <h3>Samsung Galaxy S21</h3>
+                        <div class="product__price">
+                            <h4>$175000</h4>
+                        </div>
+                        <a href="#"><button type="submit" class="product__btn">Agregar al Carrito</button></a>
+                        </div>
+                        <ul>
+                        <li>
+                            <a data-tip="Quick View" data-place="left" href="#">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-eye"></use>
+                            </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-tip="Add To Wishlist" data-place="left" href="#">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
+                            </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-tip="Add To Compare" data-place="left" href="#">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-loop2"></use>
+                            </svg>
+                            </a>
+                        </li>
+                        </ul>
+                    </div>
+                    </li>
+                    <li class="glide__slide">
+                    <div class="product">
+                        <div class="product__header">
+                        <img src="./images/products/iPhone/iphone2.jpeg" alt="product">
+                        </div>
+                        <div class="product__footer">
+                        <h3>iPhone 12 PRO</h3>
+                        <div class="product__price">
+                            <h4>$350000</h4>
+                        </div>
+                        <a href="#"><button type="submit" class="product__btn">Agregar al Carrito</button></a>
+                        </div>
+                        <ul>
+                        <li>
+                            <a data-tip="Quick View" data-place="left" href="#">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-eye"></use>
+                            </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-tip="Add To Wishlist" data-place="left" href="#">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
+                            </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-tip="Add To Compare" data-place="left" href="#">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-loop2"></use>
+                            </svg>
+                            </a>
+                        </li>
+                        </ul>
+                    </div>
+                    </li>
+                    <li class="glide__slide">
+                    <div class="product">
+                        <div class="product__header">
+                        <img src="images/products/headphone/headphone2.jpeg" alt="product">
+                        </div>
+                        <div class="product__footer">
+                        <h3>boAt Red</h3>
+                        <div class="product__price">
+                            <h4>$35000</h4>
+                        </div>
+                        <a href="#"><button type="submit" class="product__btn">Agregar al Carrito</button></a>
+                        </div>
+                        <ul>
+                        <li>
+                            <a data-tip="Quick View" data-place="left" href="#">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-eye"></use>
+                            </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-tip="Add To Wishlist" data-place="left" href="#">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
+                            </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-tip="Add To Compare" data-place="left" href="#">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-loop2"></use>
+                            </svg>
+                            </a>
+                        </li>
+                        </ul>
+                    </div>
+                    </li>
+                    <li class="glide__slide">
+                    <div class="product">
+                        <div class="product__header">
+                        <img src="images/products/sumsung/samsung1.jpeg" alt="product">
+                        </div>
+                        <div class="product__footer">
+                        <h3>Samsung Galaxy S20</h3>
+                        <div class="product__price">
+                            <h4>$120000</h4>
+                        </div>
+                        <a href="#"><button type="submit" class="product__btn">Agregar al Carrito</button></a>
+                        </div>
+                        <ul>
+                        <li>
+                            <a data-tip="Quick View" data-place="left" href="#">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-eye"></use>
+                            </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-tip="Add To Wishlist" data-place="left" href="#">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
+                            </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-tip="Add To Compare" data-place="left" href="#">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-loop2"></use>
+                            </svg>
+                            </a>
+                        </li>
+                        </ul>
+                    </div>
+                    </li>
+                    <li class="glide__slide">
+                    <div class="product">
+                        <div class="product__header">
+                        <img src="images/products/headphone/headphone1.jpeg" alt="product">
+                        </div>
+                        <div class="product__footer">
+                        <h3>boAt Blue</h3>
+                        <div class="product__price">
+                            <h4>$35000</h4>
+                        </div>
+                        <a href="#"><button type="submit" class="product__btn">Agregar al Carrito</button></a>
+                        </div>
+                        <ul>
+                        <li>
+                            <a data-tip="Quick View" data-place="left" href="#">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-eye"></use>
+                            </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-tip="Add To Wishlist" data-place="left" href="#">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
+                            </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-tip="Add To Compare" data-place="left" href="#">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-loop2"></use>
+                            </svg>
+                            </a>
+                        </li>
+                        </ul>
+                    </div>
+                    </li>
+                    <li class="glide__slide">
+                    <div class="product">
+                        <div class="product__header">
+                        <img src="images/products/iPhone/iphone1.jpeg" alt="product">
+                        </div>
+                        <div class="product__footer">
+                        <h3>iPhone XR</h3>
+                        <div class="product__price">
+                            <h4>$220000</h4>
+                        </div>
+                        <a href="#"><button type="submit" class="product__btn">Agregar al Carrito</button></a>
+                        </div>
+                        <ul>
+                        <li>
+                            <a data-tip="Quick View" data-place="left" href="#">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-eye"></use>
+                            </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-tip="Add To Wishlist" data-place="left" href="#">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
+                            </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-tip="Add To Compare" data-place="left" href="#">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-loop2"></use>
+                            </svg>
+                            </a>
+                        </li>
+                        </ul>
+                    </div>
 
-    <footer class="container-fluid">
-        <div class="row p-5 pb-2 text-white">
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                <a class="text-decoration-none text-white logo" href="/index.html">i <i class="fa-solid fa-heart"></i> Cell </a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                <p class="h5 mb-3">Links</p>
-                <div class="mb-2 footer__links">
-                    <a class="text-decoration-none" href="#">Inicio</a>
+                </ul>
                 </div>
-                <div class="mb-2 footer__links">
-                    <a class="text-decoration-none" href="#">Productos</a>
-                </div>
-                <div class="mb-2 footer__links">
-                    <a class="text-decoration-none" href="#">Testimoniales</a>
-                </div>
-                <div class="mb-2 footer__links">
-                    <a class="text-decoration-none" href="#">Contacto</a>
+
+                <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                    <svg>
+                    <use xlink:href="./images/sprite.svg#icon-arrow-left2"></use>
+                    </svg>
+                </button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                    <svg>
+                    <use xlink:href="./images/sprite.svg#icon-arrow-right2"></use>
+                    </svg>
+                </button>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                <p class="h5 mb-3">Redes Sociales</p>
-                <div class="footer__links">
-                    <a class="text-decoration-none" href="#"><i class="fa-brands fa-instagram me-3"></i>Instagram</a>
-                </div>
-                <div class="footer__links">
-                    <a class="text-decoration-none" href="#"><i class="fa-brands fa-facebook me-3"></i>Facebook</a>
-                </div>
-                <div class="footer__links">
-                    <a class="text-decoration-none" href="#"><i class="fa-brands fa-twitter me-3"></i>Twitter</a>
-                </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                <p class="h5 mb-3">Contacto</p>
-                <div class="mb-2">
-                    <p>Email: ilovecell@gmail.com</p>
+        </section>
+
+        <section class="category__section section" id="category">
+            <div class="tab__list">
+            <div class="title__container tabs">
+                <div class="section__titles category__titles ">
+                <div class="section__title filter-btn active" data-id="Todos Los Productos">
+                    <span class="dot"></span>
+                    <h1 class="primary__title">Todos Los Productos</h1>
                 </div>
-                <div class="mb-2">
-                    <p>Telefono: 11-3231-4454</p>
                 </div>
-                <div class="mb-2">
-                    Direccion: Malabia 732, CABA
+                <div class="section__titles">
+                <div class="section__title filter-btn" data-id="Tendencia">
+                    <span class="dot"></span>
+                    <h1 class="primary__title">Tendencia</h1>
                 </div>
+                </div>
+
+                <div class="section__titles">
+                <div class="section__title filter-btn" data-id="Especiales">
+                    <span class="dot"></span>
+                    <h1 class="primary__title">Especiales</h1>
+                </div>
+                </div>
+
+                <div class="section__titles">
+                <div class="section__title filter-btn" data-id="Destacados">
+                    <span class="dot"></span>
+                    <h1 class="primary__title">Destacados</h1>
+                </div>
+                </div>
+
             </div>
-            <div class="col-xs-12 pt-3">
-                <p class="text-white text-center">Copyright - All rights reserved 2022</p>
             </div>
+            <div class="category__container" data-aos="fade-up" data-aos-duration="1200">
+            <div class="category__center"></div>
+            </div>
+        </div>
+        </section>
+
+        <!-- Facility Section -->
+        <section class="facility__section section" id="facility">
+        <div class="container">
+            <div class="facility__contianer" data-aos="fade-up" data-aos-duration="1200">
+            <div class="facility__box">
+                <div class="facility-img__container">
+                <svg>
+                    <use xlink:href="./images/sprite.svg#icon-airplane"></use>
+                </svg>
+                </div>
+                <p>ENVIO GRATIS</p>
+            </div>
+
+            <div class="facility__box">
+                <div class="facility-img__container">
+                <svg>
+                    <use xlink:href="./images/sprite.svg#icon-credit-card-alt"></use>
+                </svg>
+                </div>
+                <p>GARANTIA DEL 100%</p>
+            </div>
+
+            <div class="facility__box">
+                <div class="facility-img__container">
+                <svg>
+                    <use xlink:href="./images/sprite.svg#icon-credit-card"></use>
+                </svg>
+                </div>
+                <p>TODOS LOS MEDIOS DE PAGOS</p>
+            </div>
+
+            <div class="facility__box">
+                <div class="facility-img__container">
+                <svg>
+                    <use xlink:href="./images/sprite.svg#icon-headphones"></use>
+                </svg>
+                </div>
+                <p>SOPORTE 24/7</p>
+            </div>
+            </div>
+        </div>
+        </section>
+        </div>
+
+        <!-- Testimonial Section -->
+        <section class="section testimonial" id="testimonial">
+        <div class="testimonial__container">
+            <div class="glide" id="glide_4">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                <li class="glide__slide">
+                    <div class="testimonial__box">
+                    <div class="client__image">
+                        <img src="./images/profile1.jpg" alt="profile">
+                    </div>
+                    <p>¡qué decir del iphone más potente del mercado!. El producto cumple con todo lo descrito, alta calidad a muy buen precio. Las prestaciones superan ampliamente las expectativas, apple se supera en cada nueva generación y la integración con otros productos como macbook y ipad es inigualable. El producto me llego en tiempo y forma.</p>
+                    <div class="client__info">
+                        <h3>Gerardo Roldan</h3>
+                    </div>
+                    </div>
+                </li>
+                <li class="glide__slide">
+                    <div class="testimonial__box">
+                    <div class="client__image">
+                        <img src="./images/profile2.jpg" alt="profile">
+                    </div>
+                    <p>Compre el nuevo Samgung y funciona de 10. Volveria a comprar con ustedes.</p>
+                    <div class="client__info">
+                        <h3>Camila Gonzalez</h3>
+                    </div>
+                    </div>
+                </li>
+                <li class="glide__slide">
+                    <div class="testimonial__box">
+                    <div class="client__image">
+                        <img src="./images/profile3.jpg" alt="profile">
+                    </div>
+                    <p>El producto no era el que esperaba y me reembolsaron el dinero en el mismo dia.</p>
+                    <div class="client__info">
+                        <h3>Juan Fernandez</h3>
+                    </div>
+                    </div>
+
+                </li>
+                <li class="glide__slide">
+                    <div class="testimonial__box">
+                    <div class="client__image">
+                        <img src="./images/profile4.jpg" alt="">
+                    </div>
+                    <p>El producto no era lo que esperaba pero para lo que costo vale la pena.</p>
+                    <div class="client__info">
+                        <h3>Alejandro Gomez</h3>
+                    </div>
+                    </div>
+                </li>
+                </ul>
+            </div>
+
+            <div class="glide__bullets" data-glide-el="controls[nav]">
+                <button class="glide__bullet" data-glide-dir="=0"></button>
+                <button class="glide__bullet" data-glide-dir="=1"></button>
+                <button class="glide__bullet" data-glide-dir="=2"></button>
+                <button class="glide__bullet" data-glide-dir="=3"></button>
+            </div>
+            </div>
+        </div>
+        </section>
+
+        <!-- NewsLetter -->
+        <section class="section newsletter" id="contact">
+        <div class="container">
+            <div class="newsletter__content">
+            <div class="newsletter__data">
+                <h3>ENTERATE DE NUESTRAS ULTIMAS OFERTAS</h3>
+                <p>Suscribite para enterarte de todas nuestras novedades</p>
+            </div>
+            <form action="#">
+                <input type="email" placeholder="ingresa tu email" class="newsletter__email">
+                <a class="newsletter__link" href="#">suscribite</a>
+            </form>
+            </div>
+        </div>
+        </section>
+
+    </main>
+
+    <!-- End Main -->
+
+    <!-- Footer -->
+    <footer id="footer" class="section footer">
+        <div class="container">
+        <div class="footer__top">
+            <div class="footer-top__box">
+            <h3>i Love Cell</h3>
+            </div>
+            <div class="footer-top__box">
+            <h3>INFORMACION</h3>
+            <a href="#">Sobre Nosotros</a>
+            <a href="#">Politicas de Privacidad</a>
+            <a href="#">Terminos y Condiciones</a>
+            <a href="#">Contactanos</a>
+            </div>
+            <div class="footer-top__box">
+            <h3>MI CUENTA</h3>
+            <a href="#">Mi Cuenta</a>
+            <a href="#">Historial</a>
+            <a href="#">Carrito</a>
+            <a href="#">Novedades</a>
+            <a href="#">Devoluciones</a>
+            </div>
+            <div class="footer-top__box">
+            <h3>CONTACTO</h3>
+            <div>
+                <span>
+                <svg>
+                    <use xlink:href="./images/sprite.svg#icon-location"></use>
+                </svg>
+                </span>
+                Malabia 443, Villa Crespo, CABA.
+            </div>
+            <div>
+                <span>
+                <svg>
+                    <use xlink:href="./images/sprite.svg#icon-envelop"></use>
+                </svg>
+                </span>
+                ilovecell@gmail.com
+            </div>
+            <div>
+                <span>
+                <svg>
+                    <use xlink:href="./images/sprite.svg#icon-phone"></use>
+                </svg>
+                </span>
+                4854-3877
+            </div>
+            <div>
+                <span>
+                <svg>
+                    <use xlink:href="./images/sprite.svg#icon-paperplane"></use>
+                </svg>
+                </span>
+                Buenos Aires, Argentina
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="footer__bottom">
+        <div class="footer-bottom__box">
+
+        </div>
+        <div class="footer-bottom__box">
+
+        </div>
+        </div>
         </div>
     </footer>
 
-    <script src="js/app.js"></script>
-    <script src="/js/data.js"></script>
-    <!-- LIBRERIA AOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
 
+    <script src="./js/productos.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/slider.js"></script>
 
-</body>
-</html>
+    </body>
+
+    </html>
